@@ -22,3 +22,20 @@ public class Palindrome {
         return true;
     }
 }
+
+
+  public static void main(String[] args) { //converts string to lowercase and replaces everything except numbers and alphabets
+        String s = "b o  b".toLowerCase().replaceAll("\\W", "");
+        int j=0;
+        int k = s.length() - 1;
+        while(j < s.length() / 2) {
+        //loops until half the length of the string if 
+        //even and floor value if odd.
+            if (s.charAt(j++) != s.charAt(k--)){
+        //check for first and last chars                                                                                                
+        //and  go inwards. if char do not match print 'false' and exit 
+            System.out.println("false");
+            System.exit(0);}
+        }
+        System.out.println("true"); //if every chars match print "true"
+    }
